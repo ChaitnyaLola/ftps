@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dname:</strong>
+  <%= @ftpcr.dname %>
+</p>
+
+<p>
+  <strong>Uname:</strong>
+  <%= @ftpcr.uname %>
+</p>
+
+<p>
+  <strong>Pw:</strong>
+  <%= @ftpcr.pw %>
+</p>
+
+<%= link_to 'Edit', edit_ftpcr_path(@ftpcr) %> |
+<%= link_to 'Back', ftpcrs_path %>

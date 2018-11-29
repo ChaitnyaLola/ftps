@@ -1,0 +1,37 @@
+<%= form_with(model: ftpfile, local: true) do |form| %>
+  <% if ftpfile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ftpfile.errors.count, "error") %> prohibited this ftpfile from being saved:</h2>
+
+      <ul>
+      <% ftpfile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ftpcr_id %>
+    <%= form.text_field :ftpcr_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fname %>
+    <%= form.text_field :fname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dname %>
+    <%= form.text_field :dname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

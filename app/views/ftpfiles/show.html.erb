@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ftpcr:</strong>
+  <%= @ftpfile.ftpcr %>
+</p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @ftpfile.fname %>
+</p>
+
+<p>
+  <strong>Dname:</strong>
+  <%= @ftpfile.dname %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ftpfile.description %>
+</p>
+
+<%= link_to 'Edit', edit_ftpfile_path(@ftpfile) %> |
+<%= link_to 'Back', ftpfiles_path %>

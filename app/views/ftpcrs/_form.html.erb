@@ -1,0 +1,32 @@
+<%= form_with(model: ftpcr, local: true) do |form| %>
+  <% if ftpcr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ftpcr.errors.count, "error") %> prohibited this ftpcr from being saved:</h2>
+
+      <ul>
+      <% ftpcr.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dname %>
+    <%= form.text_field :dname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uname %>
+    <%= form.text_field :uname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pw %>
+    <%= form.text_field :pw %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

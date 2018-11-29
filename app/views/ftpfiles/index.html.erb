@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ftpfiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ftpcr</th>
+      <th>Fname</th>
+      <th>Dname</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ftpfiles.each do |ftpfile| %>
+      <tr>
+        <td><%= ftpfile.ftpcr %></td>
+        <td><%= ftpfile.fname %></td>
+        <td><%= ftpfile.dname %></td>
+        <td><%= ftpfile.description %></td>
+        <td><%= link_to 'Show', ftpfile %></td>
+        <td><%= link_to 'Edit', edit_ftpfile_path(ftpfile) %></td>
+        <td><%= link_to 'Destroy', ftpfile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ftpfile', new_ftpfile_path %>

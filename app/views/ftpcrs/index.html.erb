@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ftpcrs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dname</th>
+      <th>Uname</th>
+      <th>Pw</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ftpcrs.each do |ftpcr| %>
+      <tr>
+        <td><%= ftpcr.dname %></td>
+        <td><%= ftpcr.uname %></td>
+        <td><%= ftpcr.pw %></td>
+        <td><%= link_to 'Show', ftpcr %></td>
+        <td><%= link_to 'Edit', edit_ftpcr_path(ftpcr) %></td>
+        <td><%= link_to 'Destroy', ftpcr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ftpcr', new_ftpcr_path %>
