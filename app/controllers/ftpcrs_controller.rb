@@ -69,6 +69,6 @@ class FtpcrsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ftpcr_params
-      params.require(:ftpcr).permit(:dname, :uname, :pw)
+      params.require(:ftpcr).permit(:ip, :username, :password, :source_location)
     end
 end

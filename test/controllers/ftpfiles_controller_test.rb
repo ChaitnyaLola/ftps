@@ -17,7 +17,7 @@ class FtpfilesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ftpfile" do
     assert_difference('Ftpfile.count') do
-      post ftpfiles_url, params: { ftpfile: { description: @ftpfile.description, dname: @ftpfile.dname, fname: @ftpfile.fname, ftpcr_id: @ftpfile.ftpcr_id } }
+      post ftpfiles_url, params: { ftpfile: { file_name: @ftpfile.file_name, ftpcr_id: @ftpfile.ftpcr_id } }
     end
 
     assert_redirected_to ftpfile_url(Ftpfile.last)
@@ -34,7 +34,7 @@ class FtpfilesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update ftpfile" do
-    patch ftpfile_url(@ftpfile), params: { ftpfile: { description: @ftpfile.description, dname: @ftpfile.dname, fname: @ftpfile.fname, ftpcr_id: @ftpfile.ftpcr_id } }
+    patch ftpfile_url(@ftpfile), params: { ftpfile: { file_name: @ftpfile.file_name, ftpcr_id: @ftpfile.ftpcr_id } }
     assert_redirected_to ftpfile_url(@ftpfile)
   end
 

@@ -69,6 +69,6 @@ class FtpfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ftpfile_params
-      params.require(:ftpfile).permit(:ftpcr_id, :fname, :dname, :description)
+      params.require(:ftpfile).permit(:ftpcr_id, :file_name)
     end
 end

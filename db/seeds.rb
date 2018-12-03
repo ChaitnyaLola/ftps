@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Ftpcr.create(ip: '192.168.52.201', username: 'clola1', password: 'Vanda123', source_location: '')

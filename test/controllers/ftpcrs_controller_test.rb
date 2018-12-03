@@ -17,7 +17,7 @@ class FtpcrsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ftpcr" do
     assert_difference('Ftpcr.count') do
-      post ftpcrs_url, params: { ftpcr: { dname: @ftpcr.dname, pw: @ftpcr.pw, uname: @ftpcr.uname } }
+      post ftpcrs_url, params: { ftpcr: { ip: @ftpcr.ip, password: @ftpcr.password, source_location: @ftpcr.source_location, username: @ftpcr.username } }
     end
 
     assert_redirected_to ftpcr_url(Ftpcr.last)
@@ -34,7 +34,7 @@ class FtpcrsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update ftpcr" do
-    patch ftpcr_url(@ftpcr), params: { ftpcr: { dname: @ftpcr.dname, pw: @ftpcr.pw, uname: @ftpcr.uname } }
+    patch ftpcr_url(@ftpcr), params: { ftpcr: { ip: @ftpcr.ip, password: @ftpcr.password, source_location: @ftpcr.source_location, username: @ftpcr.username } }
     assert_redirected_to ftpcr_url(@ftpcr)
   end
 

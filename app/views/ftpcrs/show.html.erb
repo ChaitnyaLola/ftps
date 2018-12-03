@@ -1,18 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Dname:</strong>
-  <%= @ftpcr.dname %>
+  <strong>Ip:</strong>
+  <%= @ftpcr.ip %>
 </p>
 
 <p>
-  <strong>Uname:</strong>
-  <%= @ftpcr.uname %>
+  <strong>Username:</strong>
+  <%= @ftpcr.username %>
 </p>
 
 <p>
-  <strong>Pw:</strong>
-  <%= @ftpcr.pw %>
+  <strong>Password:</strong>
+  <%= @ftpcr.password %>
+</p>
+
+<p>
+  <strong>Source location:</strong>
+  <%= @ftpcr.source_location %>
 </p>
 
 <%= link_to 'Edit', edit_ftpcr_path(@ftpcr) %> |

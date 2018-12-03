@@ -10,24 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_163819) do
+ActiveRecord::Schema.define(version: 2018_11_30_174203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "ftpcrs", force: :cascade do |t|
-    t.string "dname"
-    t.string "uname"
-    t.string "pw"
+    t.string "ip"
+    t.string "username"
+    t.string "password"
+    t.string "source_location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "ftpfiles", force: :cascade do |t|
     t.bigint "ftpcr_id"
-    t.string "fname"
-    t.string "dname"
-    t.string "description"
+    t.string "file_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ftpcr_id"], name: "index_ftpfiles_on_ftpcr_id"

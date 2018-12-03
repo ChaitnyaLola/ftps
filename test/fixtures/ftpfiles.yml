@@ -2,12 +2,8 @@
 
 one:
   ftpcr: one
-  fname: MyString
-  dname: MyString
-  description: MyString
+  file_name: MyString
 
 two:
   ftpcr: two
-  fname: MyString
-  dname: MyString
-  description: MyString
+  file_name: MyString

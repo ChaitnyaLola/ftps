@@ -14,9 +14,10 @@ class FtpcrsTest < ApplicationSystemTestCase
     visit ftpcrs_url
     click_on "New Ftpcr"
 
-    fill_in "Dname", with: @ftpcr.dname
-    fill_in "Pw", with: @ftpcr.pw
-    fill_in "Uname", with: @ftpcr.uname
+    fill_in "Ip", with: @ftpcr.ip
+    fill_in "Password", with: @ftpcr.password
+    fill_in "Source Location", with: @ftpcr.source_location
+    fill_in "Username", with: @ftpcr.username
     click_on "Create Ftpcr"
 
     assert_text "Ftpcr was successfully created"
@@ -27,9 +28,10 @@ class FtpcrsTest < ApplicationSystemTestCase
     visit ftpcrs_url
     click_on "Edit", match: :first
 
-    fill_in "Dname", with: @ftpcr.dname
-    fill_in "Pw", with: @ftpcr.pw
-    fill_in "Uname", with: @ftpcr.uname
+    fill_in "Ip", with: @ftpcr.ip
+    fill_in "Password", with: @ftpcr.password
+    fill_in "Source Location", with: @ftpcr.source_location
+    fill_in "Username", with: @ftpcr.username
     click_on "Update Ftpcr"
 
     assert_text "Ftpcr was successfully updated"

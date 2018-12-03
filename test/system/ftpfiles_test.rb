@@ -14,9 +14,7 @@ class FtpfilesTest < ApplicationSystemTestCase
     visit ftpfiles_url
     click_on "New Ftpfile"
 
-    fill_in "Description", with: @ftpfile.description
-    fill_in "Dname", with: @ftpfile.dname
-    fill_in "Fname", with: @ftpfile.fname
+    fill_in "File Name", with: @ftpfile.file_name
     fill_in "Ftpcr", with: @ftpfile.ftpcr_id
     click_on "Create Ftpfile"
 
@@ -28,9 +26,7 @@ class FtpfilesTest < ApplicationSystemTestCase
     visit ftpfiles_url
     click_on "Edit", match: :first
 
-    fill_in "Description", with: @ftpfile.description
-    fill_in "Dname", with: @ftpfile.dname
-    fill_in "Fname", with: @ftpfile.fname
+    fill_in "File Name", with: @ftpfile.file_name
     fill_in "Ftpcr", with: @ftpfile.ftpcr_id
     click_on "Update Ftpfile"
 

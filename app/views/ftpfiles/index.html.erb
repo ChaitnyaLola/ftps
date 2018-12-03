@@ -6,9 +6,7 @@
   <thead>
     <tr>
       <th>Ftpcr</th>
-      <th>Fname</th>
-      <th>Dname</th>
-      <th>Description</th>
+      <th>File name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,9 +15,7 @@
     <% @ftpfiles.each do |ftpfile| %>
       <tr>
         <td><%= ftpfile.ftpcr %></td>
-        <td><%= ftpfile.fname %></td>
-        <td><%= ftpfile.dname %></td>
-        <td><%= ftpfile.description %></td>
+        <td><%= ftpfile.file_name %></td>
         <td><%= link_to 'Show', ftpfile %></td>
         <td><%= link_to 'Edit', edit_ftpfile_path(ftpfile) %></td>
         <td><%= link_to 'Destroy', ftpfile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
