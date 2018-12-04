@@ -15,6 +15,12 @@ gem 'rb-readline'
 
 gem 'net-sftp'
 
+gem 'redis'
+
+gem 'resque-scheduler'
+
+gem 'resque', require: 'resque/server'
+
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
