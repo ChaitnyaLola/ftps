@@ -9,7 +9,11 @@ class Ftpcr < ApplicationRecord
 
 	def copy_only_files_from_sftp_server(source_folder = '/')
 		save_files_with_sftp(source_folder, default_destination_folder)
-		sftp_close
+		sftp.close
+	end
+
+	def self.trigger_copying_all
+		self.all.each{|ftpcr| ftpcr.copy_only_files_from_sftp_server}
 	end
 
 	def copy_files_with_folders(source_folder = '/')

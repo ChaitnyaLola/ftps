@@ -1,0 +1,7 @@
+SftpCopyFilesJob:
+  description: 'Add any missing email sending schedules'
+  class: SftpCopyFilesJob
+  queue: default
+  every:
+    - '1minute'
+    - :first_in: '10s'
