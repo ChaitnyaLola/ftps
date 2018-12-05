@@ -4,7 +4,6 @@ class SftpCopyFilesJob < ApplicationJob
    
    def perform(*args)
   	Ftpcr.trigger_copying_all
-  
   end
 end
   
