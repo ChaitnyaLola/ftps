@@ -19,6 +19,8 @@ gem 'redis'
 
 gem 'resque-scheduler'
 
+gem 'active_scheduler'
+
 gem 'resque', require: 'resque/server'
 
 gem 'resque-web', require: 'resque_web'
